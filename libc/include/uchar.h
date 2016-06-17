@@ -34,6 +34,11 @@
 
 __BEGIN_DECLS
 
+#if defined(__GNUC__) && __GNUC__ >= 5 && !defined(__cplusplus)
+typedef uint16_t char16_t;
+typedef uint32_t char32_t;
+#endif
+
 #define __STD_UTF_16__ 1
 #define __STD_UTF_32__ 1
 
